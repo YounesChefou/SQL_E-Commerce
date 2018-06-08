@@ -1,0 +1,12 @@
+Nike/AF1/M/100
+Nike/AF1/F/100
+Nike/Air Max 1/M/130
+Nike/Air Max 1/F/130
+Converse/All Star/M/70
+Converse/All Star/F/70
+Converse/One Star/M/85
+Converse/One Star/F/85
+Adidas/Superstar/M/90
+Adidas/Superstar/F/90
+Adidas/UltraBoost/M/180
+Adidas/UltraBoost/F/180

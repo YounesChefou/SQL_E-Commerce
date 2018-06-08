@@ -1,0 +1,3 @@
+CHAUSSURE(ID, Nom, Pointure, Genre, Prix) ;
+DETAILS(ID, Couleur, Fermeture, Doublure, Matière);
+CATEGORIE(Type (en Int) );
