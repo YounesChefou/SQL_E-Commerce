@@ -121,13 +121,13 @@ CREATE or REPLACE FUNCTION recherche_par_pointure(in taille int, out ref int, ou
  SELECT DISTINCT id, marque||' '||nom, prix
     FROM CHAUSSURE NATURAL JOIN STOCK
       WHERE STOCK.pointure=taille;
- $$ LANGUAGE SQL;
+ $$ LANGUAGE SQL SECURITY DEFINER;
 
 CREATE or REPLACE FUNCTION recherche_par_genre(in sexe char, out ref int, out nom varchar, out prix money)
 RETURNS SETOF record AS
 $$
 SELECT id, marque||' '||nom, prix FROM CHAUSSURE WHERE genre=sexe;
-$$ LANGUAGE SQL;
+$$ LANGUAGE SQL SECURITY DEFINER;
 
 CREATE or REPLACE FUNCTION recherche_par_categorie(in categorieCherchee varchar,  out ref int, out modele varchar, out montant money)
 RETURNS SETOF record AS
@@ -154,4 +154,4 @@ OPEN cursCat;
   END LOOP;
 RETURN;
 END;
-$$ LANGUAGE PLPGSQL;
+$$ LANGUAGE PLPGSQL SECURITY DEFINER;
